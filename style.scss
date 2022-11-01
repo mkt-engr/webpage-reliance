@@ -1,6 +1,6 @@
 body {
   width: 100%;
-  // 
+  //
 }
 
 .sectionWrapper {
@@ -55,6 +55,9 @@ body {
 
 .card__img {
   width: 100%;
+}
+.card__img  img {
+  width: 270px;
 }
 .card__txt {
   margin-top: 1rem;

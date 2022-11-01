@@ -57,6 +57,10 @@ body {
   width: 100%;
 }
 
+.card__img img {
+  width: 150px;
+}
+
 .card__txt {
   margin-top: 1rem;
   text-align: center;
