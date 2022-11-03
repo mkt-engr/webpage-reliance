@@ -1,3 +1,60 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-alert {
+  color: red;
+}
+
+.text-primary {
+  color: blue;
+}
+
+.text-large {
+  font-size: 42px;
+}
+
+.pb-3 {
+  padding-bottom: 3rem;
+}
+
 body {
   width: 100%;
 }
@@ -58,7 +115,7 @@ body {
 }
 
 .card__img img {
-  width: 150px;
+  width: 270px;
 }
 
 .card__txt {
@@ -100,4 +157,4 @@ body {
   border-radius: 3px;
   color: white;
   text-decoration: none;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=index.css.map */
