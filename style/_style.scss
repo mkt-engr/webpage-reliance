@@ -1,6 +1,6 @@
+@use "./mixins/responsive" as *;
 body {
   width: 100%;
-  //
 }
 
 .sectionWrapper {
@@ -40,25 +40,34 @@ body {
 }
 
 .cardWrapper {
-  display: flex;
+  display: block;
+  @include responsive(md) {
+    display: flex;
+  }
+
   background-color: white;
   justify-content: center;
 }
 
 .card {
   padding: 0rem 1rem;
+  width: 80%;
+  @include responsive(md) {
+    width: 50%;
+  }
+  margin-inline: auto;
 }
 
-.card:not(:last-child) {
-  margin-right: 1rem;
+@include responsive(md) {
+  .card:not(:last-child) {
+    margin-right: 1rem;
+  }
 }
 
 .card__img {
   width: 100%;
 }
-.card__img  img {
-  width: 270px;
-}
+
 .card__txt {
   margin-top: 1rem;
   text-align: center;
