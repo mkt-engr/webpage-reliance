@@ -18,7 +18,6 @@ button,
 textarea,
 select {
   font: inherit;
-  //fontはfont-size,font-weight,font-familyのショートハンドだ
 }
 
 p,
