@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>リライアンスプレイス</title>
+    <script
+      src="https://unpkg.com/micromodal/dist/micromodal.min.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="headerWrapper">
+        <div class="headerHamburger">
+          <button
+            class="c-button p-hamburger"
+            aria-label="Open modal"
+            data-micromodal-open="modal-hamburger"
+            data-micromodal-trigger="modal-hamburger"
+          >
+            <span class="material-symbols-outlined custom">menu</span>
+          </button>
+        </div>
+        <div class="headerLogo">
+          <h1 class="headerTitle">リライアンスプレイス</h1>
+        </div>
+        <nav class="listWrapper">
+          <ul class="list">
+            <li class="list__item">
+              <a class="list__link" href="/">ホーム</a>
+            </li>
+            <li class="list__item">
+              <a class="list__link" href="/representative.html">代表者紹介</a>
+            </li>
+            <li class="list__item">
+              <a class="list__link" href="/job-training.html">職業訓練</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="mx-auto">
+      <section class="sectionWrapper">
+        <h1>代表者紹介</h1>
+      </section>
+    </main>
+    <div
+      class="modal micromodal-slide"
+      id="modal-hamburger"
+      aria-hidden="false"
+    >
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div
+          class="modal__container"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-1-title"
+        >
+          <div class="modal__inner">
+            <header class="modal__header">
+              <button
+                class="modal__close"
+                aria-label="Close modal"
+                data-micromodal-close
+              ></button>
+            </header>
+            <main class="modal__content" id="modal-1-content">
+              <ul class="list">
+                <li class="list__item">
+                  <a class="list__link" href="/">ホーム</a>
+                </li>
+                <li class="list__item">
+                  <a class="list__link" href="/representative.html"
+                    >代表者紹介</a
+                  >
+                </li>
+                <li class="list__item">
+                  <a class="list__link" href="/job-training.html">職業訓練</a>
+                </li>
+              </ul>
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script/modal.js" defer></script>
+  </body>
+</html>
