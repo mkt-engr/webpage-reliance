@@ -24,14 +24,58 @@ header {
   background-color: #5d6a5c;
 }
 
-.headerTitleWrapper {
-  padding-inline: 16px;
+.headerWrapper {
+  display: flex;
+  // background-color: rgb(13, 13, 13);
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.headerHamburger {
+  display: block;
+  margin-block: auto;
+  @include responsive(md) {
+    display: none;
+  }
+}
+
+.headerLogo {
+  display: flex;
 }
 
 .headerTitle {
-  line-height: 50px;
+  color: black;
 }
 
+.listWrapper {
+  margin-left: auto;
+  margin-block: auto;
+  display: none;
+  @include responsive(md) {
+    display: block;
+  }
+}
+.list {
+  display: block;
+  @include responsive(md) {
+    display: flex;
+  }
+}
+
+.list__item {
+  padding: 1rem;
+  @include responsive(md) {
+    margin-right: 1rem;
+    padding: 0;
+  }
+}
+.list__link {
+  display: block;
+}
+
+.list__link:hover {
+  color: red;
+}
 .topImage {
   width: 100%;
   object-fit: cover;
@@ -91,7 +135,7 @@ header {
 }
 
 .list__item:not(:last-child) {
-  margin-bottom: 1rem;
+  // margin-bottom: 1rem;
 }
 
 .inquiryWrapper {

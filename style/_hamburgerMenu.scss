@@ -1,60 +1,7 @@
-@charset "UTF-8";
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-}
-
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-alert {
-  color: red;
-}
-
-.text-primary {
-  color: blue;
-}
-
-.text-large {
-  font-size: 42px;
-}
-
-.pb-3 {
-  padding-bottom: 3rem;
-}
-
 /**************************\
   Basic Modal Styles 
 \**************************/
+
 .modal {
   --modal-inner-padding: 20px;
   display: block;
@@ -67,7 +14,8 @@ h6 {
 }
 
 .modal {
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+    helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
 }
 
 .modal__overlay {
@@ -92,7 +40,6 @@ h6 {
   box-sizing: border-box;
   position: absolute;
 }
-
 .modal__container {
   background-color: #fff;
   padding: 30px;
@@ -125,7 +72,7 @@ h6 {
 }
 
 .modal__header .modal__close:before {
-  content: "✕";
+  content: "\2715";
   color: white;
 }
 
@@ -133,6 +80,7 @@ h6 {
   margin-top: 2rem;
   margin-bottom: 2rem;
   line-height: 1.5;
+  // color: rgba(0, 0, 0, 0.8);
   color: white;
 }
 
@@ -154,13 +102,18 @@ h6 {
   margin: 0;
   will-change: transform;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
   transform: translateZ(0);
+  transition: -webkit-transform 0.25s ease-out;
   transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
 }
 
 .modal__btn:focus,
 .modal__btn:hover {
+  -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
 
@@ -180,6 +133,7 @@ h6 {
     opacity: 1;
   }
 }
+
 @keyframes mmfadeOut {
   from {
     opacity: 1;
@@ -188,6 +142,7 @@ h6 {
     opacity: 0;
   }
 }
+
 @keyframes mmslideIn {
   from {
     transform: translateX(-100%);
@@ -196,6 +151,7 @@ h6 {
     transform: translateX(0);
   }
 }
+
 @keyframes mmslideOut {
   from {
     transform: translateX(0%);
@@ -204,6 +160,7 @@ h6 {
     transform: translateX(-100%);
   }
 }
+
 .micromodal-slide {
   display: none;
 }
@@ -212,19 +169,19 @@ h6 {
   display: block;
 }
 
-.micromodal-slide[aria-hidden=false] .modal__overlay {
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
   animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
 
-.micromodal-slide[aria-hidden=false] .modal__container {
+.micromodal-slide[aria-hidden="false"] .modal__container {
   animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
 
-.micromodal-slide[aria-hidden=true] .modal__overlay {
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
   animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
 
-.micromodal-slide[aria-hidden=true] .modal__container {
+.micromodal-slide[aria-hidden="true"] .modal__container {
   animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -233,6 +190,7 @@ h6 {
   will-change: transform;
 }
 
+// カスタムCSS
 .is-open .modal__container {
   position: absolute;
   left: 0;
@@ -243,9 +201,10 @@ h6 {
 .is-open .modal__container {
   background-color: black;
   color: white;
-  padding: 0;
+  padding: 0; //デフォルトだとpadding部分をクリックするとモーダルが閉じるので0にする
 }
 
+//デフォルトだと.modal__containerのpaddingの部分をクリックしてもモーダルが閉じるのでcontainerの下にinnerを追加
 .modal__inner {
   padding: var(--modal-inner-padding) 30px;
   height: calc(100vh - var(--modal-inner-padding) * 2);
@@ -258,170 +217,6 @@ h6 {
 .c-button.p-hamburger {
   background-color: inherit;
   color: black;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   border: 0;
 }
-
-body {
-  width: 100%;
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-}
-
-.sectionWrapper {
-  margin-inline: auto;
-  width: min(80%, 1300px);
-  margin-bottom: 3rem;
-}
-
-.sectionWrapper--wide {
-  width: 100%;
-}
-
-header {
-  position: sticky;
-  top: 0;
-}
-
-.header {
-  background-color: #5d6a5c;
-}
-
-.headerWrapper {
-  display: flex;
-  color: white;
-  padding: 1rem 2rem;
-}
-
-.headerHamburger {
-  display: block;
-  margin-block: auto;
-}
-@media screen and (min-width: 768px) {
-  .headerHamburger {
-    display: none;
-  }
-}
-
-.headerLogo {
-  display: flex;
-}
-
-.headerTitle {
-  color: black;
-}
-
-.listWrapper {
-  margin-left: auto;
-  margin-block: auto;
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  .listWrapper {
-    display: block;
-  }
-}
-
-.list {
-  display: block;
-}
-@media screen and (min-width: 768px) {
-  .list {
-    display: flex;
-  }
-}
-
-.list__item {
-  padding: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .list__item {
-    margin-right: 1rem;
-    padding: 0;
-  }
-}
-
-.list__link {
-  display: block;
-}
-
-.list__link:hover {
-  color: red;
-}
-
-.topImage {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
-}
-
-.cardWrapper {
-  display: block;
-  background-color: white;
-  justify-content: center;
-}
-@media screen and (min-width: 768px) {
-  .cardWrapper {
-    display: flex;
-  }
-}
-
-.card {
-  padding: 0rem 1rem;
-  width: 80%;
-  margin-inline: auto;
-}
-@media screen and (min-width: 768px) {
-  .card {
-    width: 50%;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .card:not(:last-child) {
-    margin-right: 1rem;
-  }
-}
-.card__img {
-  width: 100%;
-}
-
-.card__txt {
-  margin-top: 1rem;
-  text-align: center;
-  font-size: 36px;
-  font-weight: 700;
-}
-
-.card__txt--normal {
-  color: #34ba2d;
-}
-
-.card__txt--alert {
-  color: #ff0000;
-}
-
-.list {
-  list-style: none;
-}
-
-.list__item--strong {
-  font-size: 21px;
-  line-height: 34px;
-}
-
-.inquiryWrapper {
-  margin-bottom: 2rem;
-}
-
-.inquiryLink {
-  display: inline-block;
-  background-color: yellowgreen;
-  padding: 1rem 2rem;
-  border-radius: 3px;
-  color: white;
-  text-decoration: none;
-}/*# sourceMappingURL=index.css.map */
