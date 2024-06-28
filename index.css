@@ -455,13 +455,13 @@ header {
   justify-content: center;
   -webkit-align-items: center;
   align-items: center;
-  height: auto;
-  width: auto;
+  width: 100%;
+  height: 100%;
 }　
 .flex>p {
   font-size: 15px;
   width: 100%;
-  height: 10%;
+  height: 100%;
 }
 
 
