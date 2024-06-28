@@ -41,7 +41,7 @@ h6 {
 }
 
 .text-primary {
-  color: blue;
+  color: red;
 }
 
 .text-large {
@@ -271,7 +271,7 @@ body {
 
 .sectionWrapper {
   margin-inline: auto;
-  width: min(80%, 1300px);
+  width: min(80%, 4300px);
   margin-bottom: 3rem;
 }
 
@@ -285,7 +285,7 @@ header {
 }
 
 .header {
-  background-color: #5d6a5c;
+  background-color: #3A95FF;
 }
 
 .headerWrapper {
@@ -298,7 +298,7 @@ header {
   display: block;
   margin-block: auto;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48px) {
   .headerHamburger {
     display: none;
   }
@@ -309,7 +309,7 @@ header {
 }
 
 .headerTitle {
-  color: black;
+  color: white;
 }
 
 .listWrapper {
@@ -363,7 +363,7 @@ header {
   background-color: white;
   justify-content: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1768px) {
   .cardWrapper {
     display: flex;
   }
@@ -374,7 +374,7 @@ header {
   width: 80%;
   margin-inline: auto;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1768px) {
   .card {
     width: 50%;
   }
@@ -413,15 +413,50 @@ header {
   line-height: 34px;
 }
 
+/* 横並び */
+
+.flex {
+  display: flex; /*横並び*/
+}
+.flex .image {
+  width: 140px; /*画像サイズ指定*/
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+.flex .text {
+  margin: 0 0 0 0px;
+  padding: 0;
+  margin-inline: auto;
+  width: min(80%, 430px);
+  margin-bottom: 3rem;
+}
+
 .inquiryWrapper {
   margin-bottom: 2rem;
 }
 
 .inquiryLink {
   display: inline-block;
-  background-color: yellowgreen;
+  font-size: 21px;
+  background-color: #3A95FF;
   padding: 1rem 2rem;
-  border-radius: 3px;
+  border-radius: 100px;
   color: white;
   text-decoration: none;
 }/*# sourceMappingURL=index.css.map */
+
+
+.flex{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  
+}
+.flex>p {
+  font-size: 15px;
+  width: 100%;
+}
