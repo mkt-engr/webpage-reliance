@@ -494,61 +494,32 @@ header {
 }
 
 
-.slider {
-  width: 400px;
-  height: 200px;
-  display: flex;
+.slide {
+  position: relative;
   overflow: hidden;
-  margin: 0 auto;
-  align-items:center;
-  justify-content: center;
+  width: 400px;
+  height: 300px;
+  margin: auto;
+  background: #fff;
 }
-
-.slider > :first-child {
-  -webkit-animation-name: scroll;
-  animation-name: scroll;
-  -webkit-animation-duration: 20s;
-  animation-duration: 20s;
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
+.slide img {
+  display: block;
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  left: 100%;
+  animation: slide-anime 15s ease infinite;
 }
-
-@keyframes scroll {
-0% {
-  margin-left: 0;
-}
-
-20% {
-  margin-left: -100%;
-}
-
-25% {
-  margin-left: -100%;
-}
-
-45% {
-  margin-left: -200%;
-}
-
-50% {
-  margin-left: -200%;
-}
-
-70% {
-  margin-left: -300%;
-}
-
-75% {
-  margin-left: -300%;
-}
-
-95% {
-  margin-left: -400%;
-}
-
-100% {
-  margin-left: -400%;
-}
+.slide img:nth-of-type(1) {animation-delay: 0s;}
+.slide img:nth-of-type(2) {animation-delay: 3s;}
+.slide img:nth-of-type(3) {animation-delay: 6s;}
+.slide img:nth-of-type(4) {animation-delay: 9s;}
+.slide img:nth-of-type(5) {animation-delay: 12s;}
+ 
+@keyframes slide-anime{
+  0% {left: 100%;}
+  2% {left: 0;}
+  18% {left: 0;}
+  20% {left: -100%;}
+  100% {left: -100%;}
 }
