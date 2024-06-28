@@ -363,7 +363,7 @@ header {
   background-color: white;
   justify-content: center;
 }
-@media screen and (min-width: 1768px) {
+@media screen and (min-width: 768px) {
   .cardWrapper {
     display: flex;
   }
@@ -374,7 +374,7 @@ header {
   width: 80%;
   margin-inline: auto;
 }
-@media screen and (min-width: 1768px) {
+@media screen and (min-width: 768px) {
   .card {
     width: 50%;
   }
@@ -452,11 +452,103 @@ header {
   display: flex;
   align-items:center;
   justify-content: center;
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
   
 }
 .flex>p {
   font-size: 15px;
   width: 100%;
+}
+
+
+.cardWrapper1 {
+  display: block;
+  background-color: white;
+  justify-content: center;
+}
+@media screen and (min-width: 1768px) {
+  .cardWrapper1 {
+    display: flex;
+  }
+}
+
+.card1 {
+  padding: 0rem 1rem;
+  width: 80%;
+  margin-inline: auto;
+}
+@media screen and (min-width: 1768px) {
+  .card1 {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1768px) {
+  .card1:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+.card1__img {
+  width: 100%;
+}
+
+
+.slider {
+  width: 400px;
+  height: 200px;
+  display: flex;
+  overflow: hidden;
+  margin: 0 auto;
+  align-items:center;
+  justify-content: center;
+}
+
+.slider > :first-child {
+  -webkit-animation-name: scroll;
+  animation-name: scroll;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+0% {
+  margin-left: 0;
+}
+
+20% {
+  margin-left: -100%;
+}
+
+25% {
+  margin-left: -100%;
+}
+
+45% {
+  margin-left: -200%;
+}
+
+50% {
+  margin-left: -200%;
+}
+
+70% {
+  margin-left: -300%;
+}
+
+75% {
+  margin-left: -300%;
+}
+
+95% {
+  margin-left: -400%;
+}
+
+100% {
+  margin-left: -400%;
+}
 }
